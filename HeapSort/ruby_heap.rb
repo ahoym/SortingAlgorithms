@@ -1,5 +1,5 @@
 def heapify(arr, count)
-  ((count - 2) / 2).downto(0) {|start| sift_down(arr, start, count - 1) }
+  ((count - 2) / 2).downto(0) {|start| sift_down(arr, start, count - 1)}
 end
 
 def sift_down(arr, start_val, end_val)
@@ -7,7 +7,6 @@ def sift_down(arr, start_val, end_val)
   
   while root * 2 + 1 <= end_val
     child = root * 2 + 1
-    break if child > end_val
     
     if child + 1 <= end_val && arr[child] < arr[child + 1]
       child += 1
@@ -33,6 +32,6 @@ def heap_sort(arr, count)
   arr
 end
 
-p heap_sort([1,3,5,7,9,8,6,4,2], 9)
-p heap_sort([9,8,7,6,5,4,3,2,1], 9)
-p heap_sort([1,2,3,4,5,4,3,2,1], 9)
+p heap_sort([1,3,5,7,9,8,6,4,2,0], 10 )
+p heap_sort([9,8,7,6,5,4,3,2,1,0], 10)
+p heap_sort([1,2,3,4,5,0,4,3,2,1], 10)
