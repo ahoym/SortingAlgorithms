@@ -9,6 +9,7 @@ Sorts implemented:
 
 + Bubble Sort
 + Cocktail Sort
++ Heap Sort
 + Insertion Sort
 + Merge Sort
 + Selection Sort
@@ -44,6 +45,26 @@ When to Use:
 
 For every pass, elements are first sorted increasingly, followed by being sorted decreasingly in a reverse iteration. Similar to and marginally better than Bubble Sort, but sorts in both directions per pass. Because of the bi-directionality, it takes cares of "turtles" better. Turtles are when smaller elements are at the end of the array in bubble sort, which significantly slows performance.
 
+Heap Sort
+=========
+Statistics:
+
++ Worst Case performance **O(*n* log *n*)**
++ Best Case performance **O(*n* log *n*)**
++ Average Case performance **O(*n* log *n*)**
++ Worst Case Space Complexity **O(1) additional memory**
+
+When to Use: 
+
++ Embedded systems
++ One of the most efficient. Competes with quicksort and mergesort.
++ Has a better worst-case running time (**O(*n* log *n*)**) than quicksort (**O(*n*^2)**), but a little slower otherwise.
++ Requires a constant amount of auxiliary space as opposed to mergesort (O(*n*)).
+
+
+In the first step, a heap is built. A heap is a type of data structure similar to a binary tree. The largest values are at the top(root) of the heap, with up to two smaller value children. In the second step, the current largest value from the heap is inserted into the sorted tail, updating every iteration, until the heap is empty and the array is sorted.
+
+
 Insertion Sort
 ==============
 Statistics:
@@ -75,7 +96,7 @@ When to Use:
 + When a stable sort is desired
 + Sorting a linked list
 
-Array is split up into *n* sublists, and merged into the correct order accordingly. This merge is done recursively until there is only one sublist remaining, which is the sorted list. Is a type of divide-and-conquer algorithm
+Array is split up into *n* sublists, and merged into the correct order accordingly. This merge is done recursively until there is only one sublist remaining, which is the sorted list. Is a type of divide-and-conquer algorithm.
 
 Selection Sort
 ==============
