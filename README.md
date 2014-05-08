@@ -4,6 +4,7 @@ A compilation of sorting algorithms programmed in:
 
 + Javascript
 + Ruby
++ Python
 
 Sorts implemented:
 
@@ -12,6 +13,7 @@ Sorts implemented:
 + Heap Sort
 + Insertion Sort
 + Merge Sort
++ Odd-Even Sort
 + Selection Sort
 + Quick Sort
 
@@ -43,7 +45,7 @@ When to Use:
 
 + For Teaching Sorts
 
-For every pass, elements are first sorted increasingly, followed by being sorted decreasingly in a reverse iteration. Similar to and marginally better than Bubble Sort, but sorts in both directions per pass. Because of the bi-directionality, it takes cares of "turtles" better. Turtles are when smaller elements are at the end of the array in bubble sort, which significantly slows performance.
+Variant of bubble sort. For every pass, elements are first sorted increasingly, followed by being sorted decreasingly in a reverse iteration. Similar to and marginally better than Bubble Sort, but sorts in both directions per pass. Because of the bi-directionality, it takes cares of "turtles" better. Turtles are when smaller elements are at the end of the array in bubble sort, which significantly slows performance.
 
 Heap Sort
 =========
@@ -97,6 +99,22 @@ When to Use:
 + Sorting a linked list
 
 Array is split up into *n* sublists, and merged into the correct order accordingly. This merge is done recursively until there is only one sublist remaining, which is the sorted list. Is a type of divide-and-conquer algorithm.
+
+Odd-Even Sort
+===========
+Statistics:
+
++ Worst Case performance **O(n^2)**
++ Best Case performance **O(n)**
++ Average Case performance **O(n^2)**
++ Worst Case Space Complexity **O(1) additional memory**
+
+When to Use: 
+
++ Efficient when used on parallel processors.
++ For Teaching Sorts
+
+Variant of bubble sort. Repeatedly steps through pairs of elements in the array, starting from the odd indices, and switches them accordingly. This is the Odd-Even comparison. After, this is repeated for Even-Odd passes. The combination of these constitutes one iteration. Iterates through the array until no swaps are needed, which signifies it is sorted. Note, the algorithm in this repo is the single-processor algorithm, which is just as (in)efficient as bubble sort.
 
 Selection Sort
 ==============
