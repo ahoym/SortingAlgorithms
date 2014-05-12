@@ -36,5 +36,6 @@ function quickSort(arr, left, right) {
 	return arr;
 };
 
-console.log( quickSort([1,3,5,7,9,8,6,4,2], 0, 8) );
-console.log( quickSort([1,2,3,4,5,4,3,2,1], 0, 8) );
+console.log( quickSort([1,3,5,7,9,8,6,4,2,0], 0, 9) );
+console.log( quickSort([9,8,7,6,5,4,3,2,1,0], 0, 9) );
+console.log( quickSort([1,2,3,4,5,0,4,3,2,1], 0, 9) );

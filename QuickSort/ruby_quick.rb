@@ -29,5 +29,6 @@ def partition(arr, left, right, pivot_index)
   store_index
 end
 
-p quick_sort([1,3,5,7,9,8,6,4,2], 0, 8)
-p quick_sort([1,2,3,4,5,4,3,2,1], 0, 8)
+p quick_sort([1,3,5,7,9,8,6,4,2,0], 0, 9)
+p quick_sort([9,8,7,6,5,4,3,2,1,0], 0, 9)
+p quick_sort([1,2,3,4,5,0,4,3,2,1], 0, 9)
