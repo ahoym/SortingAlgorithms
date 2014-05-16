@@ -32,6 +32,3 @@ def bubble_sort(arr)
   
   duped_arr
 end
-
-p bubble_sort([9,7,5,3,1,2,4,6,8])
-p bubble_sort([1,2,3,4,5,1,2,3,4])
