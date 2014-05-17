@@ -16,6 +16,7 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
 			"../BubbleSort/js_bubble.js",
+			"../InsertionSort/js_insertion.js",
 			"**/*.tests.js"
     ],
 
