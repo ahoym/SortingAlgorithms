@@ -17,6 +17,7 @@ module.exports = function(config) {
     files: [
 			"../BubbleSort/js_bubble.js",
 			"../InsertionSort/js_insertion.js",
+			"../SelectionSort/js_selection.js",
 			"**/*.tests.js"
     ],
 
