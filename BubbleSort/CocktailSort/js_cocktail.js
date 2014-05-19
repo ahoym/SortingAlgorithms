@@ -20,7 +20,3 @@ function cocktailSort(arr) {
 	
 	return arr
 };
-
-console.log( cocktailSort([1,3,5,7,9,8,6,4,2]) );
-console.log( cocktailSort([1,2,3,4,5,4,3,2,1]) );
-console.log( cocktailSort([9,8,7,6,5,4,3,2,1]) );
