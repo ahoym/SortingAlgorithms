@@ -13,6 +13,3 @@ function insertionSort(arr) {
 	
 	return arr;
 };
-
-console.log( insertionSort([1,3,5,7,9,8,6,4,2]) );
-console.log( insertionSort([1,2,3,4,5,4,3,2,1]) );

@@ -1,3 +1,25 @@
+function quickSortI(arr) {
+	if (arr.length <= 1) return arr;
+	
+	var left = [];
+	var eq = [];
+	var right = [];
+	pivot = arr[Math.floor(Math.random() * arr.length)]
+
+	for (var i = 0; i < arr.length; i++) {
+		if (arr[i] < pivot) {
+			left.push(arr[i]);
+		} else if (arr[i] === pivot) {
+			eq.push(arr[i]);
+		} else {
+			right.push(arr[i]);
+		}
+	}
+	
+	return quickSortI(left).concat(eq).concat(quickSortI(right));
+}
+
+// =================== Pointer Based =======================
 function partition(arr, left, right, pivotIndex) {
 	var storeIndex = left;
 	var pivotVal = arr[pivotIndex];
@@ -22,7 +44,7 @@ function partition(arr, left, right, pivotIndex) {
 	return storeIndex;
 };
 
-function quickSort(arr, left, right) {
+function quickSortII(arr, left, right) {
 	if (arr.length < 2) return arr;
 	
 	if (left < right) {
@@ -36,6 +58,6 @@ function quickSort(arr, left, right) {
 	return arr;
 };
 
-console.log( quickSort([1,3,5,7,9,8,6,4,2,0], 0, 9) );
-console.log( quickSort([9,8,7,6,5,4,3,2,1,0], 0, 9) );
-console.log( quickSort([1,2,3,4,5,0,4,3,2,1], 0, 9) );
+console.log( quickSortI([1,3,5,7,9,8,6,4,2,0]));
+console.log( quickSortI([9,8,7,6,5,4,3,2,1,0]));
+console.log( quickSortI([1,2,3,4,5,0,4,3,2,1]));

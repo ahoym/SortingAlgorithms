@@ -1,4 +1,14 @@
-def quick_sort(arr, left, right)
+def quick_sortI(arr)
+  return arr if arr.length <= 1
+  pivot = arr[0]
+  
+  left, right = arr[1..-1].partition { |el| el < pivot }
+  quick_sortI(left) + [pivot] + quick_sortI(right)
+end
+
+# =================== Pointer Based =======================
+# Why? .pop functions are expensive.
+def quick_sortII(arr, left, right)
   return arr if arr.length < 2
 
   if left < right
@@ -29,6 +39,6 @@ def partition(arr, left, right, pivot_index)
   store_index
 end
 
-p quick_sort([1,3,5,7,9,8,6,4,2,0], 0, 9)
-p quick_sort([9,8,7,6,5,4,3,2,1,0], 0, 9)
-p quick_sort([1,2,3,4,5,0,4,3,2,1], 0, 9)
+p quick_sortI([1,3,5,7,9,8,6,4,2,0])
+p quick_sortI([9,8,7,6,5,4,3,2,1,0])
+p quick_sortI([1,2,3,4,5,0,4,3,2,1])

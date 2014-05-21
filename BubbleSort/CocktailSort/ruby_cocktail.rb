@@ -12,7 +12,3 @@ def cocktail_sort(arr)
         
   arr
 end
-
-p cocktail_sort([1,3,5,7,9,8,6,4,2])
-p cocktail_sort([1,2,3,4,5,4,3,2,1])
-p cocktail_sort([9,8,7,6,5,4,3,2,1])

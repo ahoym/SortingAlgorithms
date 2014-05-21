@@ -12,6 +12,3 @@ def insertion_sort(arr)
   
   arr
 end
-
-p insertion_sort([3,1])
-p insertion_sort([1,3,5,7,9,8,6,4,2])
