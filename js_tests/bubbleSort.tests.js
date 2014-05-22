@@ -1,21 +1,11 @@
 "use strict";
 
-function generateRandomArr(n) {
-	var random_arr = [];
-	
-	for (var i = 0; i < n; i++) {
-		random_arr.push(Math.ceil(Math.random() * 100));
-	}
-	
-	return random_arr;
-};
-
 describe("bubbleSort Derivates", function () {
 	describe("#bubbleSort", function() {	
 		it('should sort an unsorted array', function() {
 			var random_arr = generateRandomArr(10);
 			var cloned_random_arr = random_arr.slice(0);
-			expect(bubbleSort(cloned_random_arr)).toEqual(random_arr.sort(function(a,b) {return a-b}));
+			expect(bubbleSort(cloned_random_arr)).toEqual(random_arr.mySort());
 			
 			expect(bubbleSort([1,3,5,7,9,8,6,4,2,0])).toEqual([0,1,2,3,4,5,6,7,8,9]);		
 			expect(bubbleSort([9,8,7,6,5,4,3,2,1,0])).toEqual([0,1,2,3,4,5,6,7,8,9]);
@@ -38,7 +28,7 @@ describe("bubbleSort Derivates", function () {
 		it('should handle large unsorted arrays', function() {
 			var huge_random_arr = generateRandomArr(10000);
 			var cloned_huge_random_arr = huge_random_arr.slice(0);
-			expect(bubbleSort(cloned_huge_random_arr)).toEqual(huge_random_arr.sort(function(a,b) {return a-b}));
+			expect(bubbleSort(cloned_huge_random_arr)).toEqual(huge_random_arr.mySort());
 		});
 	
 		it('should not alter an already sorted array', function() {
@@ -51,7 +41,7 @@ describe("bubbleSort Derivates", function () {
 		it('should sort an unsorted array', function() {
 			var random_arr = generateRandomArr(10);
 			var cloned_random_arr = random_arr.slice(0);
-			expect(cocktailSort(cloned_random_arr)).toEqual(random_arr.sort(function(a,b) {return a-b}));
+			expect(cocktailSort(cloned_random_arr)).toEqual(random_arr.mySort());
 			
 			expect(cocktailSort([1,3,5,7,9,8,6,4,2,0])).toEqual([0,1,2,3,4,5,6,7,8,9]);
 			expect(cocktailSort([9,8,7,6,5,4,3,2,1,0])).toEqual([0,1,2,3,4,5,6,7,8,9]);
@@ -74,7 +64,7 @@ describe("bubbleSort Derivates", function () {
 		it('should handle large unsorted arrays', function() {
 			var huge_random_arr = generateRandomArr(10000);
 			var cloned_huge_random_arr = huge_random_arr.slice(0);
-			expect(cocktailSort(cloned_huge_random_arr)).toEqual(huge_random_arr.sort(function(a,b) {return a-b}));
+			expect(cocktailSort(cloned_huge_random_arr)).toEqual(huge_random_arr.mySort());
 		});
 		
 		it('should not alter an already sorted array', function() {
@@ -87,7 +77,7 @@ describe("bubbleSort Derivates", function () {
 		it('should sort an unsorted array', function() {
 			var random_arr = generateRandomArr(10);
 			var cloned_random_arr = random_arr.slice(0);
-			expect(oddEvenSort(cloned_random_arr)).toEqual(random_arr.sort(function(a,b) {return a-b}));
+			expect(oddEvenSort(cloned_random_arr)).toEqual(random_arr.mySort());
 			
 			expect(oddEvenSort([1,3,5,7,9,8,6,4,2,0])).toEqual([0,1,2,3,4,5,6,7,8,9]);
 			expect(oddEvenSort([9,8,7,6,5,4,3,2,1,0])).toEqual([0,1,2,3,4,5,6,7,8,9]);

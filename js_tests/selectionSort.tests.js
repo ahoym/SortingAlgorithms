@@ -1,11 +1,10 @@
+"use strict";
+
 describe("selectionSort", function() {
 	it("should sort an unsorted array", function() {
-		var random_arr = [];
-		for (var i = 0; i < 10; i++) {
-			random_arr.push(Math.ceil(Math.random() * 100));
-		}
-		var cloned_random_arr = random_arr.slice(0);
-		expect(selectionSort(cloned_random_arr)).toEqual(random_arr.sort(function(a,b) {return a-b}));
+		var randomArr = generateRandomArr(10);
+		var clonedRandomArr = randomArr.slice(0);
+		expect(selectionSort(clonedRandomArr)).toEqual(randomArr.mySort());
 
 		expect(selectionSort([1,3,5,7,9,8,6,4,2,0])).toEqual([0,1,2,3,4,5,6,7,8,9]);		
 		expect(selectionSort([9,8,7,6,5,4,3,2,1,0])).toEqual([0,1,2,3,4,5,6,7,8,9]);
@@ -26,12 +25,9 @@ describe("selectionSort", function() {
 	});
 	
 	it('should handle large unsorted arrays', function() {
-		var random_arr = [];
-		for (var i = 0; i < 10000; i++) {
-			random_arr.push(Math.ceil(Math.random() * 100));
-		}
-		var cloned_random_arr = random_arr.slice(0);
-		expect(selectionSort(cloned_random_arr)).toEqual(random_arr.sort(function(a,b) {return a-b}));
+		var randomArr = generateRandomArr(10000);
+		var clonedRandomArr = randomArr.slice(0);
+		expect(selectionSort(clonedRandomArr)).toEqual(randomArr.mySort());
 	});
 	
 	it('should not alter an already sorted array', function() {
