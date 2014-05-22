@@ -17,7 +17,3 @@ function mergeSort(arr) {
 	
 	return merge( mergeSort(left), mergeSort(right) );
 };
-
-console.log( mergeSort([1,3,5,7,9,8,6,4,2]) );
-console.log( mergeSort([1,2,3,4,5,4,3,2,1]) );
-console.log( mergeSort([0,9,5,1,0,4,2,6,4]) );

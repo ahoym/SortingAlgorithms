@@ -20,6 +20,7 @@ module.exports = function(config) {
 			"../BubbleSort/OddEvenSort/js_oddEven.js",
 			"../InsertionSort/js_insertion.js",
 			"../SelectionSort/js_selection.js",
+			"../MergeSort/js_merge.js",
 			"**/*.tests.js"
     ],
 
